@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    function upd() {
+        $.ajax({
+            type: "get",
+            data: "a=1",
+            url: "http://localhost:8080/user/getAllUser",
+            success: function(result) {
+                console.log(result);
+            }
+        });
+    }
+</script>
+<body>
+<!--获取-->
+<button id="btn2" onclick="upd()">Get request 获取</button>
+</body>
+
+</html>
